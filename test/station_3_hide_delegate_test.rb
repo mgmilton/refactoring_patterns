@@ -13,7 +13,8 @@ class PlaneTest < Minitest::Test
     refute engine_2.running?
 
     # ============= Refactor below
-    dusty.engines.each{|e| e.start}
+    dusty.start
+    #dusty.engines.each{|e| e.start}
     # ============= Refactor above
 
     # These assertions are OK. Don't alter them :)

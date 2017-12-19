@@ -1,7 +1,6 @@
-class Boat
+class Boat  
   def initialize
-    @motor_1_running = false
-    @motor_2_running = false
+    boat = Motors.new
   end
 
   def start
@@ -12,4 +11,14 @@ class Boat
   def running?
     @motor_1_running && @motor_2_running
   end
+end
+
+class Motors
+  attr_reader :motor_1_running, :motor_2_running
+
+  def initialize
+    @motor_1_running = false
+    @motor_2_running = false
+  end
+
 end

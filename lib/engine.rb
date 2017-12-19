@@ -1,3 +1,4 @@
+
 class Engine
   def core_weight
     250
@@ -7,11 +8,16 @@ class Engine
     50
   end
 
+  def total_weight
+    core_weight + propeller_weight
+  end
+
   def start
     @running = true
   end
 
   def running?
-    !!@running
+    @running
   end
+
 end
